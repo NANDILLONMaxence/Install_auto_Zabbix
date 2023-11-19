@@ -1,13 +1,14 @@
-# Installer Zabbix automatique
+# Install Zabbix automatically
 
-Bienvenue sur mon dépôt Github dédié à l'automatisation de l'installation de Zabbix, une solution de surveillance et de gestion de réseau essentielle. Vous trouverez ici un ensemble de scripts et de ressources conçus pour simplifier et accélérer le processus d'installation de Zabbix sur différentes plates-formes (principalement Linux). Que vous soyez administrateur système, responsable de la sécurité ou passionné par la surveillance réseau, ce référentiel vise à faciliter la configuration de Zabbix, vous permettant ainsi d'économiser du temps et des efforts.
+Welcome to my Github repository dedicated to automating the installation of Zabbix, an essential network monitoring and management solution. Here you'll find a set of scripts and resources designed to simplify and speed up the process of installing Zabbix on various platforms (mainly Linux). Whether you're a system administrator, security manager or network monitoring enthusiast, this repository aims to make Zabbix configuration easier, saving you time and effort.
 
-L'automatisation de l'installation de Zabbix est cruciale pour garantir une configuration cohérente, éviter les erreurs humaines et simplifier le déploiement de solutions de surveillance. Les scripts fournis ici sont conçus pour fonctionner de manière transparente sur différentes distributions Linux et autres systèmes d'exploitation, vous permettant de vous concentrer sur la surveillance efficace de vos réseaux et systèmes.
+Automating Zabbix installation is crucial to ensuring consistent configuration, avoiding human error and simplifying the deployment of monitoring solutions. The scripts provided here are designed to run seamlessly on different Linux distributions and other operating systems, allowing you to concentrate on effectively monitoring your networks and systems.
 
-N'hésitez pas à explorer les scripts et guides fournis dans ce référentiel pour démarrer rapidement avec Zabbix et profiter de ses avantages pour la surveillance proactive de votre infrastructure. Si vous avez des questions ou des suggestions, n'hésitez pas à les partager. Nous apprécions votre contribution et votre expertise.
+Feel free to explore the scripts and guides provided in this repository to get started quickly with Zabbix and take advantage of its benefits for proactive monitoring of your infrastructure. If you have any questions or suggestions, please don't hesitate to share them. We value your input and expertise.
 
-Prêt à simplifier votre processus d'installation de Zabbix ? Plongeons dans le monde de l'automatisation !
+Ready to simplify your Zabbix installation process ? Let's dive into the world of automation !
 
-# Installation auto zabbix Debian-11 :
- - [001_Zabbix_Debian-11](lien)
+
+## Installing zabbix auto on Debian 11 :
+ - [001_Zabbix_Debian-11](https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/001_Zabbix_debian-11.bash)
  
