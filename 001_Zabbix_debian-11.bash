@@ -52,29 +52,26 @@ check_install_wget
 apt install sudo
 
 # Fonction pour vérifier et désinstaller Apache2 si nécessaire
-check_et_desinstaller_apache2() {
+check_et_stop_apache2() {
     # Vérifier si Apache2 est installé
     if [ -x "$(command -v apache2)" ]; then
         # Apache2 est installé
-        read -p "Apache2 is installed. Do you want to uninstall it ? (yes/non) : " choix_utilisateur
+        read -p "Apache2 is running. Do you want to stop it ? (yes/no) : " choix_utilisateur
 
         if [ "$choix_utilisateur" = "yes" ] || [ "$choix_utilisateur" = "y" ]; then
-            # Désinstaller Apache2
-            sudo apt-get purge apache2
-            sudo apt-get autoremove
-            sudo apt-get clean
-
-            echo "Apache2 was successfully uninstalled, and the system was cleaned."
+            # stop Apache2
+           systemctl stop apache2
+            echo "Apache2 was successfully stopped."
         else
-            echo "Warning: Not uninstalling Apache2 may cause conflicts with other system components (Nginx)."
+            echo "Warning: Apache2 is not stopped this may cause conflicts with other system components (Nginx)."
         fi
     else
-        echo "Apache2 is not installed on your system."
+        echo "Apache2 is stoppd on your system. good..."
     fi
 }
 
 # Appel de la fonction pour vérifier et désinstaller Apache2
-check_et_desinstaller_apache2
+check_et_stop_apache2
 
 ## Install Zabbix repository
 echo "Install Zabbix repository..."
@@ -90,10 +87,13 @@ apt update
 
 # Install Zabbix server, frontend, agent
 echo "Install Zabbix server, frontend, agent..."
-apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent postgresql postgresql-contrib
-pg_ctlcluster 14 main start
+apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent postgresql postgresql-contrib zabbix-get
 
-# Ensure that the service is started:
+# Start cluster
+pg_ctlcluster 13 main start
+sleep 3
+
+# Assurez-vous que le service est démarré:
 echo "Ensure that the service is started"
 systemctl start postgresql.service
 
@@ -200,7 +200,21 @@ systemctl enable zabbix-server zabbix-agent nginx php7.4-fpm
 # Ouvrir la page Web de l'interface utilisateur Zabbix
 
 # Access the Zabbix Web UI
+echo ""
 echo "Now open the Zabbix web interface using the URL http://IP_address:Port."
+echo ""
+echo ""
+# Début du blocklogo
+blocklogo=$(cat <<'EOL'
+                    _|        _|        _|                      _|            _|        _|                                    _|    _|
+ _|_|_|_|    _|_|_|  _|_|_|    _|_|_|        _|    _|        _|_|_|    _|_|    _|_|_|          _|_|_|  _|_|_|                _|_|  _|_|
+     _|    _|    _|  _|    _|  _|    _|  _|    _|_|        _|    _|  _|_|_|_|  _|    _|  _|  _|    _|  _|    _|  _|_|_|_|_|    _|    _|
+   _|      _|    _|  _|    _|  _|    _|  _|    _|_|        _|    _|  _|        _|    _|  _|  _|    _|  _|    _|                _|    _|
+ _|_|_|_|    _|_|_|  _|_|_|    _|_|_|    _|  _|    _|        _|_|_|    _|_|_|  _|_|_|    _|    _|_|_|  _|    _|                _|    _|
+EOL
+)
 
-# Envoi du message
-echo "----------------------------Create by NANDILLON Maxence---------------------------------"
+# Appliquer le formatage
+echo -e "\e[1;31m\e[1m┌──────────────────────────────────────────────────────Create by NANDILLON Maxence──────────────────────────────────────────────────────┐\e[0m"
+echo -e "\e[1;97m\e[1m $blocklogo \e[0m"
+echo -e "\e[1;31m\e[1m└──────────────────────────────────────────────────────Create by NANDILLON Maxence──────────────────────────────────────────────────────┘\e[0m"
