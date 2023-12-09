@@ -8,6 +8,18 @@ Feel free to explore the scripts and guides provided in this repository to get s
 
 Ready to simplify your Zabbix installation process ? Let's dive into the world of automation !
 
+## Install
+
+Clone repository Install_auto_Zabbix on your host:
+```bash
+git clone https://github.com/NANDILLONMaxence/Install_auto_Zabbix.git
+chmod +x Install_auto_Zabbix/*.sh
+cd Install_auto_Zabbix
+```
+launch the script
+```bash
+./001_Zabbix_debian-11.bash
+```
 
 ## Installing zabbix auto on Debian 11 :
  - [001_Zabbix_Debian-11](https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/001_Zabbix_debian-11.bash)
