@@ -59,13 +59,3 @@ For the first connection, you will need to enter the default name and password:
 Your Zabbix environment is ready to use :
 
 <img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/monitor.png" width="100%" />
-
-
-
-
-
-
-
-## Installing zabbix auto on Debian 11 :
- - [001_Zabbix_Debian-11](https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/001_Zabbix_debian-11.bash)
- 
