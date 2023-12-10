@@ -20,6 +20,51 @@ launch the script
 ```bash
 ./001_Zabbix_debian-11.bash
 ```
+---
+## Web interface configuration
+
+After running the installation script :
+
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/zabbix.png" width="100%" />
+
+
+Open your web browser and enter the IP and port of your Zabbix server :
+
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/out.png"  width="40%" />
+
+
+On the first page, choose your default language :
+
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/zabbix_main.png" width="100%" />
+
+To configure the database connection :
+- Uncheck `TLS encryption`
+- Enter `the password` you have set for the zabbix database
+
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/zabbix_second.png" width="100%" />
+
+In the next window, select :
+- The `server name` Zabbix
+- Your `Timezone` setting
+- Your `theme`
+  
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/zabbix_name.png" width="100%" />
+
+For the first connection, you will need to enter the default name and password:
+- User name `Admin`
+- password `zabbix`
+
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/Connexion_default.png" width="40%" />
+
+Your Zabbix environment is ready to use :
+
+<img src= "https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/screens/monitor.png" width="100%" />
+
+
+
+
+
+
 
 ## Installing zabbix auto on Debian 11 :
  - [001_Zabbix_Debian-11](https://github.com/NANDILLONMaxence/Install_auto_Zabbix/blob/main/001_Zabbix_debian-11.bash)
