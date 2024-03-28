@@ -77,10 +77,10 @@ check_et_stop_apache2
 echo "Install Zabbix repository..."
 
 # Téléchargement des packets zabbix pour debian 11
-wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-4+debian11_all.deb
+wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.4-1+debian11_all.deb
 
 # Extraction des fichiers
-dpkg -i zabbix-release_6.0-4+debian11_all.deb
+dpkg -i zabbix-release_6.4-1+debian11_all.deb
 
 # Mettez à jour la liste de paquets
 apt update
