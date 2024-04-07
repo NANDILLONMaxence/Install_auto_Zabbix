@@ -13,7 +13,7 @@ Ready to simplify your Zabbix installation process ? Let's dive into the world o
 Clone repository Install_auto_Zabbix on your host:
 ```bash
 git clone https://github.com/NANDILLONMaxence/Install_auto_Zabbix.git
-chmod +x Install_auto_Zabbix/*.sh
+chmod +x Install_auto_Zabbix/*.bash
 cd Install_auto_Zabbix
 ```
 launch the script
