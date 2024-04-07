@@ -20,6 +20,8 @@ launch the script
 ```bash
 ./001_Zabbix_debian-11.bash
 ```
+
+### 🚧 If you get a `dpkg` error, check this solution : [Err_dpkg](https://github.com/NANDILLONMaxence/My_ERROR/tree/main/Err_dpkg)
 ---
 ## Web interface configuration
 
